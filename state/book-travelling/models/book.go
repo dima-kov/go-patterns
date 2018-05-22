@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/dima-kov/patterns/book-travelling/states/interface"
+	"github.com/dima-kov/go-patterns/state/book-travelling/states/interface"
 )
 
 type Book struct {

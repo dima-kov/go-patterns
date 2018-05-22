@@ -1,6 +1,6 @@
 package states
 
-import "github.com/dima-kov/patterns/book-travelling/models"
+import "github.com/dima-kov/go-patterns/state/book-travelling/models"
 
 type ReadFeedback struct {
 	Book models.Book

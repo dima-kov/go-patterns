@@ -2,7 +2,7 @@ package states
 
 import (
 	"errors"
-	"github.com/dima-kov/patterns/book-travelling/models"
+	"github.com/dima-kov/go-patterns/state/book-travelling/models"
 )
 
 type WaitingForOwner struct {
@@ -18,7 +18,7 @@ func (wo WaitingForOwner) ConfirmByOwner(user interface{}) error {
 	if requestUser != wo.Book.Owner {
 		return errors.New("wou, you are not the owner. We`ll report about u")
 	}
-	send_notigfication_that_book_will_arrive_soon(wo.Book.Owner) // TODO change Book.Owner to bookreading.user
+	//send_notigfication_that_book_will_arrive_soon(wo.Book.Owner) // TODO change Book.Owner to bookreading.user
 	wo.Book.SetState(ConfirmedByOwner{})
 	return nil
 }

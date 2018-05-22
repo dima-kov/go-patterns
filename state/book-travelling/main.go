@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/dima-kov/patterns/book-travelling/models"
-	"github.com/dima-kov/patterns/book-travelling/states"
+	"github.com/dima-kov/go-patterns/state/book-travelling/models"
+	"github.com/dima-kov/go-patterns/state/book-travelling/states"
 )
 
 func main() {
