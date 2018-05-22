@@ -1,18 +1,18 @@
 package main
 
-type HumanMakeCoffeeInterface interface {
-	touchFirst()
-	touchSecond()
-}
+import (
+	"github.com/dima-kov/go-patterns/adapter/coffee_machine/button_machine"
+	"github.com/dima-kov/go-patterns/adapter/coffee_machine/touch_machine"
+)
 
-func main()  {
-	touchMachine := NewTouchMachine()
-	oldMachine := NewButtonCoffeeMachine()
+func main() {
+	touchMachine := touch_machine.NewTouchMachine()
+	oldMachine := button_machine.NewButtonCoffeeMachine()
 
-	touchMachine.touchFirst()
-	touchMachine.touchSecond()
+	touchMachine.TouchFirst()
+	touchMachine.TouchSecond()
 
-	touchAdapterForOld := NewTouchCoffeeMachineAdapter(oldMachine)
-	touchAdapterForOld.touchFirst()
-	touchAdapterForOld.touchSecond()
+	touchAdapterForButton := button_machine.NewTouchCoffeeMachineAdapter(oldMachine)
+	touchAdapterForButton.TouchFirst()
+	touchAdapterForButton.TouchSecond()
 }
